@@ -34,7 +34,7 @@ scenario 'user adds a character to TV show' do
 
   expect(page).to have_content char.name
   expect(page).to have_content char.actor
-  expect(page).to_not have_content char.description
+
 end
 
 scenario 'submit without required fields' do
