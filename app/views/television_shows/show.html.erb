@@ -8,3 +8,34 @@
 <div>
   <%= @television_show.synopsis %>
 </div>
+
+<h4>Characters</h4>
+<ul>
+<% @characters.each do |character| %>
+<li><%= "#{character.name} - #{character.actor}" %></li>
+<%end%>
+</ul>
+
+
+
+<%= form_for [@television_show, @character] do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+   <div>
+    <%= f.label :actor %>
+    <%= f.text_field :actor %>
+  </div>
+
+   <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <%= f.submit 'Submit' %>
+<% end %>
+
+
