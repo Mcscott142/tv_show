@@ -3,7 +3,8 @@
 <ul>
   <% @characters.each do |char| %>
     <li>
-      <%= "#{char.name} - #{char.actor} - #{char.television_show.title}" %>
+      <%= "#{char.name} - #{char.actor} - #{char.television_show.title}" %><br>
+      <%= link_to "Remove", char, method: :delete %>
     </li>
   <% end %>
 </ul>
